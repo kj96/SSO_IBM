@@ -100,10 +100,22 @@ app.get("/app/signout", function (req, res) {
 	res.send('Susseccfully Signout User');
 });
 
-app.get
-//app.listen(3000);
+app.get('/', function(req,res) {
+	res.send('hello');
+});
 
+
+//app.listen(3000);
 //app.listen(process.env.PORT || 3000);
 
-http.createServer(app).listen(8080);
-https.createServer(options, app).listen(8443);
+// var httpServer = http.createServer(app);
+// httpServer.listen(8080, () => {
+// 	console.log("http server starting on port : 8080")
+//   });
+
+
+var httpsServer = https.createServer(options, app);
+
+httpsServer.listen(8443, () => {
+	console.log("https server starting on port : 8443")
+  });
