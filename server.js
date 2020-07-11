@@ -1,5 +1,6 @@
 'use strict';
 require('dotenv').config();
+var http = require('http');
 var https = require("https");
 var saml2 = require('saml2-js');
 var fs = require('fs');
@@ -103,4 +104,6 @@ app.get
 //app.listen(3000);
 
 //app.listen(process.env.PORT || 3000);
-https.createServer(options, app).listen(8080);
+
+http.createServer(app).listen(8080);
+https.createServer(options, app).listen(8443);
