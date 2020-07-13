@@ -120,4 +120,3 @@ httpsServer.listen(8443, () => {
 	console.log("https server starting on port : 8443")
   });
 
-// http://sso-ibm7-default.mycluster-dal10-b-550403-23d856d630cf08991a05ca754c06f1ff-0000.us-south.containers.appdomain.cloud
